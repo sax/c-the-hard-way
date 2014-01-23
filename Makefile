@@ -9,7 +9,7 @@ all: directories source
 directories:
 	mkdir -p build
 
-source: ex4 ex5 ex6 ex7 ex8
+source: ex4 ex5 ex6 ex7 ex8 ex18
 
 ex4: directories
 	$(CC) $(CFLAGS) src/ex4.c -o build/ex4
@@ -29,7 +29,11 @@ ex7: directories
 
 ex8: directories
 	$(CC) $(CFLAGS) src/ex8.c -o build/ex8
-	chmod 0744 build/ex7
+	chmod 0744 build/ex8
+
+ex18: directories
+	$(CC) $(CFLAGS) src/ex18.c -o build/ex18
+	chmod 0744 build/ex18
 
 clean:
 	rm -rf build
